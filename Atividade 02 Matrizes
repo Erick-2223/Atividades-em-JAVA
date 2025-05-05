@@ -1,0 +1,38 @@
+//ATIVIDADE 02 MATRiZES
+package trabalho;
+import java.util.Scanner;
+
+public class Trabalho {
+
+    public static void main(String[] args) {
+        int[][] matriz = {
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12},
+            {13, 14, 15, 16}
+        };
+
+        int somaPrimeiraColuna = 0;
+        int produtoPrimeiraLinha = 1;
+        int somaTotal = 0;
+        int produtoDiagonalPrincipal = 1;
+
+        for (int i = 0; i < 4; i++) {
+            somaPrimeiraColuna += matriz[i][0];
+            somaTotal += matriz[i][0] + matriz[i][1] + matriz[i][2] + matriz[i][3];
+
+            if (i == 0) {
+                for (int j = 0; j < 4; j++) {
+                    produtoPrimeiraLinha *= matriz[0][j];
+                }
+            }
+
+            produtoDiagonalPrincipal *= matriz[i][i];
+        }
+
+        System.out.println("Soma da primeira coluna: " + somaPrimeiraColuna);
+        System.out.println("Produto da primeira linha: " + produtoPrimeiraLinha);
+        System.out.println("Soma de todos os elementos: " + somaTotal);
+        System.out.println("Produto da diagonal principal: " + produtoDiagonalPrincipal);
+    }
+}
