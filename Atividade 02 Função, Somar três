@@ -1,0 +1,14 @@
+//ATIVIDADE 02 FUNÇÃO
+package trabalho;
+
+public class Trabalho {
+
+    public static int somarTres(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    public static void main(String[] args) {
+        int resultado = somarTres(5, 10, 15);
+        System.out.println("A soma é: " + resultado);
+    }
+}
