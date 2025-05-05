@@ -1,0 +1,35 @@
+//ATIVIDADE 01 VETORES
+package trabalho;
+import java.util.Scanner;
+
+public class Trabalho {
+
+    public static void main(String[] args) {
+         Scanner scanner = new Scanner(System.in);
+        int[] A = new int[100];
+        int soma = 0;
+        int maior = Integer.MIN_VALUE;
+        int menor = Integer.MAX_VALUE;
+
+        for (int i = 0; i < 100; i++) {
+            System.out.print("Digite o " + (i + 1) + "º número: ");
+            A[i] = scanner.nextInt();
+            soma += A[i];
+            if (A[i] > maior) {
+                maior = A[i];
+            }
+            if (A[i] < menor) {
+                menor = A[i];
+            }
+        }
+
+        double media = (double) soma / 100;
+
+        System.out.println("Soma: " + soma);
+        System.out.println("Média: " + media);
+        System.out.println("Maior valor: " + maior);
+        System.out.println("Menor valor: " + menor);
+
+        scanner.close();
+    }
+}
