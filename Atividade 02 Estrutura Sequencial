@@ -1,8 +1,8 @@
 //ATIVIDADE 02 ESTRUTURA SEQUENCIAL
-package trabai;
+package trabalho;
 import java.util.Scanner;
 
-public class Trabai {
+public class Trabalho {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
