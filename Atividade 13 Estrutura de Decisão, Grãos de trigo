@@ -1,0 +1,21 @@
+//ATIVIDADE 13 ESTRUTURA DE DECISÃO
+//Grãos de Trigo
+package trabalho;
+import java.math.BigInteger;
+import java.util.Scanner;
+
+public class Trabalho {
+
+    public static void main(String[] args) {
+        
+        BigInteger totalGraos = BigInteger.ZERO;
+        BigInteger graosNaCasa = BigInteger.ONE;
+
+        for (int i = 1; i <= 64; i++) {
+            totalGraos = totalGraos.add(graosNaCasa);
+            graosNaCasa = graosNaCasa.multiply(BigInteger.valueOf(2));
+        }
+
+        System.out.println("Total de grãos de trigo é de: " + totalGraos);
+    }
+}
