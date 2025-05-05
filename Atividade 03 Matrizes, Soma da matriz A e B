@@ -1,0 +1,33 @@
+//ATIVIDADE 03 MATRiZES
+package trabalho;
+
+public class Trabalho {
+
+    public static void main(String[] args) {
+int[][] A = {
+            {-10, 1, 4, 6},
+            {2, 3, 2, 8}
+        };
+
+        int[][] B = {
+            {1, 8, 4, -1},
+            {0, 6, 3, -3}
+        };
+
+        int[][] C = new int[2][4];
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 4; j++) {
+                C[i][j] = A[i][j] + B[i][j];
+            }
+        }
+
+        System.out.println("Matriz A + B:");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print(C[i][j] + "\t");
+            }
+            System.out.println();
+        }
+    }
+}
