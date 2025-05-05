@@ -1,0 +1,17 @@
+//ATIVIDADE 01 FUNÇÃO
+package trabalho;
+
+public class Trabalho {
+    
+public static boolean ehPrefixo(String prefixo, String palavra) {
+        return palavra.startsWith(prefixo);
+    }
+
+    public static void main(String[] args) {
+        // Testando a função
+        System.out.println(ehPrefixo("pre", "prefixo"));   
+        System.out.println(ehPrefixo("fix", "prefixo"));   
+        System.out.println(ehPrefixo("pre", "pre"));       
+        System.out.println(ehPrefixo("abc", "abcd"));     
+    }
+}
