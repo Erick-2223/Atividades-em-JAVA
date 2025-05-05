@@ -1,0 +1,38 @@
+//ATIVIDADE 03 VETORES
+//SOMA DOS VETORES
+package trabalho;
+import java.util.Scanner;
+
+public class Trabalho {
+
+    public static void main(String[] args) {
+     Scanner scanner = new Scanner(System.in);
+        int tamanho = 10;
+        int[] vetorA = new int[tamanho];
+        int[] vetorB = new int[tamanho];
+        int[] vetorC = new int[tamanho];
+
+        System.out.println("Digite os valores do vetor A:");
+        for (int i = 0; i < tamanho; i++) {
+            System.out.print("A[" + i + "]: ");
+            vetorA[i] = scanner.nextInt();
+        }
+
+        System.out.println("Digite os valores do vetor B:");
+        for (int i = 0; i < tamanho; i++) {
+            System.out.print("B[" + i + "]: ");
+            vetorB[i] = scanner.nextInt();
+        }
+
+        for (int i = 0; i < tamanho; i++) {
+            vetorC[i] = vetorA[i] + vetorB[i];
+        }
+
+        System.out.println("Vetor C (soma de A + B):");
+        for (int i = 0; i < tamanho; i++) {
+            System.out.println("C[" + i + "] = " + vetorC[i]);
+        }
+
+        scanner.close();
+    }
+}
