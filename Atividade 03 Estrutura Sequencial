@@ -1,0 +1,21 @@
+//ATIVIDADE 03 ESTRUTURA SEQUENCIAL
+package trabalho;
+import java.util.Scanner;
+
+public class Trabalho {
+
+    public static void main(String[] args) {
+        final double PI = 3.14159;
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Digite o valor do raio da circunferência: ");
+        double raio = scanner.nextDouble();
+        
+        double area = PI * raio * raio;
+        
+        System.out.printf("A área da circunferência é: %.2f\n", area);
+
+        scanner.close();
+    }
+}
