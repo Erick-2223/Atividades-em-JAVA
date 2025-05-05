@@ -1,0 +1,37 @@
+//ATIVIDADE 02 STRINGS
+//FRASE INFORAMDA PELO USUARIO
+package trabalho;
+import java.util.Scanner;
+
+public class Trabalho {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite uma frase: ");
+        String frase = scanner.nextLine();
+
+
+        int espacosEmBranco = 0;
+        int contadorVogais = 0;
+
+        frase = frase.toLowerCase();
+
+        for (int i = 0; i < frase.length(); i++) {
+            char caractere = frase.charAt(i);
+
+            if (caractere == ' ') {
+                espacosEmBranco++;
+            }
+
+            if (caractere == 'a' || caractere == 'e' || caractere == 'i' || caractere == 'o' || caractere == 'u') {
+                contadorVogais++;
+            }
+        }
+
+        System.out.println("Quantidade de espaços em branco: " + espacosEmBranco);
+        System.out.println("Quantidade de vogais (a, e, i, o, u): " + contadorVogais);
+
+        scanner.close();
+    }
+}
