@@ -1,0 +1,44 @@
+//ATIVIDADE 03 ESTRUTURA DE DECISÃO
+//Ordem Crescente
+package trabalho;
+import java.util.Scanner;
+
+public class Trabalho {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o primeiro número: ");
+        double num1 = scanner.nextDouble();
+
+        System.out.print("Digite o segundo número: ");
+        double num2 = scanner.nextDouble();
+
+        System.out.print("Digite o terceiro número: ");
+        double num3 = scanner.nextDouble();
+
+        double temp;
+
+        if (num1 > num2) {
+            temp = num1;
+            num1 = num2;
+            num2 = temp;
+        }
+
+        if (num1 > num3) {
+            temp = num1;
+            num1 = num3;
+            num3 = temp;
+        }
+
+        if (num2 > num3) {
+            temp = num2;
+            num2 = num3;
+            num3 = temp;
+        }
+        
+        System.out.println("Numeros em ordem crescente: " + num1 + ", " + num2 + ", " + num3);
+
+        scanner.close();
+    }
+}
