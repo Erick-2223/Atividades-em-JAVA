@@ -1,0 +1,56 @@
+//ATIVIDADE 03 STRINGS
+//JOGO DE ADIVINHA
+package trabalho;
+import java.util.*;
+
+public class Trabalho {
+
+    public static void main(String[] args) {
+        String[] palavras = {"java", "programacao", "computador", "desenvolvimento", "inteligente"};
+        
+        Random random = new Random();
+        String palavraEscolhida = palavras[random.nextInt(palavras.length)];
+        
+        String palavraEmbaralhada = embaralharPalavra(palavraEscolhida);
+
+        int tentativas = 6;
+
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Bem-vindo ao jogo de adivinhação!");
+        System.out.println("A palavra embaralhada é: " + palavraEmbaralhada);
+        
+        while (tentativas > 0) {
+            System.out.print("Tente adivinhar a palavra: ");
+            String tentativa = scanner.nextLine().toLowerCase();
+
+
+            if (tentativa.equals(palavraEscolhida)) {
+                System.out.println("Parabéns! Você adivinhou a palavra: " + palavraEscolhida);
+                break;
+            } else {
+                tentativas--;
+                if (tentativas > 0) {
+                    System.out.println("Errado! Você ainda tem " + tentativas + " tentativas.");
+                } else {
+                    System.out.println("Você perdeu! A palavra era: " + palavraEscolhida);
+                }
+            }
+        }
+        
+        scanner.close();
+    }
+
+    public static String embaralharPalavra(String palavra) {
+        List<Character> letras = new ArrayList<>();
+        for (char c : palavra.toCharArray()) {
+            letras.add(c);
+        }
+        Collections.shuffle(letras);
+        StringBuilder palavraEmbaralhada = new StringBuilder();
+        for (char c : letras) {
+            palavraEmbaralhada.append(c);
+        }
+        return palavraEmbaralhada.toString();
+    }
+}
