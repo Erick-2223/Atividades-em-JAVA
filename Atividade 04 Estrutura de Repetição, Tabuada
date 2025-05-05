@@ -1,0 +1,24 @@
+//ATIVIDADE 04 ESTRUTURA DE REPETIÇÃO
+//TABUADO DE 1 ATE O VALOR "N"
+package trabalho;
+import java.util.Scanner;
+
+public class Trabalho {
+
+    public static void main(String[] args) {
+         Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o valor de N para exibir as tabuadas de 1 até N: ");
+        int N = scanner.nextInt();
+
+        for (int i = 1; i <= N; i++) {
+            System.out.println("Tabuada de " + i + ":");
+            for (int j = 1; j <= 10; j++) {
+                System.out.println(i + " x " + j + " = " + (i * j));
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
