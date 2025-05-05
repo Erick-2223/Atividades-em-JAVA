@@ -1,0 +1,22 @@
+//ATIVIDADE 01 STRINGS
+//ESCREVER O NOME DE TRAS PRA FRENTE UTILIZANDO SOMENTE LETRAS MAIUSCULAS
+package trabalho;
+import java.util.Scanner;
+
+public class Trabalho {
+
+    public static void main(String[] args) {
+         Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite seu nome: ");
+        String nome = scanner.nextLine();
+
+        nome = nome.toUpperCase();
+
+        StringBuilder nomeInvertido = new StringBuilder(nome);
+
+        System.out.println("Nome invertido: " + nomeInvertido.reverse().toString());
+
+        scanner.close();
+    }
+}
