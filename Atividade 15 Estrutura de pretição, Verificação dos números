@@ -1,0 +1,56 @@
+//ATIVIDADE 15 ESTRUTURA DE REPETIÇÃO
+//VERIFICAÇÃO DOS NÚMEROS
+//DIGITE A QUANTIDADE DE NÚMEROS DESEJADO LOGO APÓS DIGITE 0 PARA ENCERRAR E DAR INICIO A VERIFICAÇÃO
+package trabalho;
+import java.util.Scanner;
+
+public class Trabalho {
+
+    public static void main(String[] args) {
+         Scanner scanner = new Scanner(System.in);
+
+        int maior = Integer.MIN_VALUE; 
+        int menor = Integer.MAX_VALUE;
+        int soma = 0;
+        int quantidade = 0;
+        int pares = 0;
+        int impares = 0;
+
+        while (true) {
+            System.out.print("Digite um número (digite 0 para terminar): ");
+            int numero = scanner.nextInt();
+
+            if (numero == 0) {
+                break;
+            }
+
+            soma += numero;
+            quantidade++;
+
+            if (numero > maior) {
+                maior = numero;
+            }
+
+            if (numero < menor) {
+                menor = numero;
+            }
+
+            if (numero % 2 == 0) {
+                pares++;
+            } else {
+                impares++;
+            }
+        }
+
+        double media = quantidade > 0 ? (double) soma / quantidade : 0;
+
+        System.out.println("Maior número: " + maior);
+        System.out.println("Menor número: " + menor);
+        System.out.println("Soma dos números: " + soma);
+        System.out.println("Média dos números: " + media);
+        System.out.println("Quantidade de números pares: " + pares);
+        System.out.println("Quantidade de números ímpares: " + impares);
+
+        scanner.close();
+    }
+}
