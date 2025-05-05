@@ -1,0 +1,28 @@
+//ATIVIDADE 02 ESTRUTURA SEQUENCIAL
+package trabai;
+import java.util.Scanner;
+
+public class Trabai {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite sua nota do primeiro bimestre:");
+        double nt1 = scanner.nextDouble();
+
+        System.out.println("Digite sua nota do segundo bimestre:");
+        double nt2 = scanner.nextDouble();
+
+        System.out.println("Digite sua nota do terceiro bimestre:");
+        double nt3 = scanner.nextDouble();
+
+        System.out.println("Digite sua nota do quarto bimestre:");
+        double nt4 = scanner.nextDouble();
+
+        double media = (nt1 + nt2 + nt3 + nt4) / 4;
+
+        System.out.printf("A média do aluno é: %.2f\n", media);
+
+        scanner.close();
+    }
+}
