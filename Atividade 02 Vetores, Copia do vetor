@@ -1,0 +1,30 @@
+//ATIVIDADE 02 VETORES
+//COPIAR VETOR A PARA O VETOR B
+package trabalho;
+import java.util.Scanner;
+
+public class Trabalho {
+
+    public static void main(String[] args) {
+                 Scanner scanner = new Scanner(System.in);
+        int tamanho = 10;
+        int[] vetorA = new int[tamanho];
+        int[] vetorB = new int[tamanho];
+
+        for (int i = 0; i < tamanho; i++) {
+            System.out.print("Digite o valor para a posição " + i + ": ");
+            vetorA[i] = scanner.nextInt();
+        }
+
+        for (int i = 0; i < tamanho; i++) {
+            vetorB[i] = vetorA[i];
+        }
+
+        System.out.println("Conteúdo do vetor B (cópia do vetor A):");
+        for (int i = 0; i < tamanho; i++) {
+            System.out.println("vetorB[" + i + "] = " + vetorB[i]);
+        }
+
+        scanner.close();
+    }
+}
