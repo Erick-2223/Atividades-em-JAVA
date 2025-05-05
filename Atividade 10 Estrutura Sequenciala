@@ -1,0 +1,25 @@
+//ATIVIDADE 10 ESTRUTURA SEQUENCIAL
+package trabalho;
+import java.util.Scanner;
+
+public class Trabalho {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Digite os valores a seguir para calcular o volume de uma caixa retangular");
+        System.out.print("Digite o valor do comprimento: ");
+        double comprimento = scanner.nextDouble();
+        
+        System.out.print("Digite o valor da largura: ");
+        double largura = scanner.nextDouble();
+        
+        System.out.print("Digite o valor da altura: ");
+        double altura = scanner.nextDouble();
+     
+        double volume = comprimento * largura * altura;
+        System.out.printf("O volume é: %.2f\n", volume);
+
+        scanner.close();
+    }
+}
